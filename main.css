@@ -1,5 +1,12 @@
 <@charset "UTF-8";>
-/* Reset CSS */
+/* ======================================
+    [0] HTML5 Doctor Reset CSS
+    [1] 要素
+    [] レスポンシブ対応
+======================================== */
+/* **************************
+  [0] HTML5 Doctor Reset CSS
+************************** */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -9,7 +16,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
 margin:0;
@@ -24,7 +31,7 @@ body {
 line-height:1;
 }
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,nav,section {
 display:block;
 }
 nav ul {
@@ -54,7 +61,7 @@ text-decoration:none;
 /* change colours to suit your needs */
 mark {
 background-color:#ff9;
-color:#000; 
+color:#000;
 font-style:italic;
 font-weight:bold;
 }
@@ -73,7 +80,7 @@ border-spacing:0;
 hr {
 display:block;
 height:1px;
-border:0;   
+border:0;
 border-top:1px solid #cccccc;
 margin:1em 0;
 padding:0;
@@ -81,4 +88,46 @@ padding:0;
 input, select {
 vertical-align:middle;
 }
-/* ~Reset CSS */
+
+
+/* **************************
+  [1] メイン要素
+************************** */
+.wrapper {
+    width: 100%;
+}
+
+header {
+    background: tomato;
+}
+nav {
+    background: skyblue;
+}
+.container {
+    display: flex;
+}
+.main {
+    background: pink;
+    width: 70%;
+}
+.side {
+    background: orange;
+    width: 30%;
+}
+footer {
+    background: plum;
+}
+
+/* **************************
+  [] レスポンシブ対応
+************************** */
+/* タブレット端末 */
+@media only screen and (min-width: 480px) {
+}
+/* パソコン */
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
