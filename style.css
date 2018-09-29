@@ -1,7 +1,9 @@
 /* ======================================
     [0] HTML5 Doctor Reset CSS
-    [1] 要素
-    [] レスポンシブ対応
+    [1] レイアウト要素
+    [2] 記述要素
+    [3] 各要素
+    [-] レスポンシブ対応
 ======================================== */
 /* **************************
   [0] HTML5 Doctor Reset CSS
@@ -51,13 +53,11 @@ font-size:100%;
 vertical-align:baseline;
 background:transparent;
 }
-/* change colours to suit your needs */
 ins {
 background-color:#ff9;
 color:#000;
 text-decoration:none;
 }
-/* change colours to suit your needs */
 mark {
 background-color:#ff9;
 color:#000;
@@ -75,25 +75,23 @@ table {
 border-collapse:collapse;
 border-spacing:0;
 }
-/* change border colour to suit your needs */
 hr {
 display:block;
 height:1px;
 border:0;
-border-top:1px solid #cccccc;
+border-top:1px solid #ccc;
 margin:1em 0;
 padding:0;
 }
 input, select {
 vertical-align:middle;
 }
-
 * {
     box-sizing: border-box;
 }
 
 /* **************************
-  [1] メイン要素
+  [1] レイアウト要素
 ************************** */
 @font-face {
     font-family: 'Limelight';
@@ -104,16 +102,27 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
-    color: #333;
-    background: #eee;
-    height: 100%;
+    color: #60554b;
+    background-color: #efe7da;
+    background-image:
+    radial-gradient(#ccc 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 header {
     width: 100%;
-    background: tomato;
-    text-align: center;
+    background: #fff;
+    border-bottom: 3px solid #888;
 }
 nav {
+    width: 100%;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+.wrapper {
     width: 100%;
 }
 #content {
@@ -122,7 +131,7 @@ nav {
     flex-direction: column;
 }
 #main {
-    background: pink;
+    background: #fff;
     width: 100%;
     padding: 20px;
     order:1;
@@ -130,21 +139,38 @@ nav {
 #side {
     width: 100%;
     order:2;
-    background: #5aa8ed;
+    background: #d6ad75;
     color: #fff;
 }
 footer {
     width: 100%;
-    background: plum;
+    background: #555;
+    color: #fff;
     text-align: center;
 }
+
 /* **************************
-  [2] 各文章の要素
+  [2] 記述要素
 ************************** */
-h1 {font-size: 1.8em}
+
 /* **************************
   [3] 各要素
 ************************** */
+/* header */
+h1 {
+    font-size: 2rem;
+}
+h1 a {
+    color: #60554b;
+    text-decoration: none;
+}
+
+/* main */
+
+/* side */
+#side section {
+    padding-bottom: 20px;
+}
 .side-title {
     font-family: 'Limelight', cursive;
     font-size: 1.5rem;
@@ -152,15 +178,66 @@ h1 {font-size: 1.8em}
 .update-log-box {
     height: 8.5em;
     background: #fff;
-    color: #333;
+    color: #60554b;
     overflow: scroll;
 }
+
+/* footer */
 .copyright {
     padding: 1em 0;
     font-size: 12px;
 }
 /* **************************
-  [] レスポンシブ対応
+  [4] SNS
+************************** */
+.sns {
+    display: block;
+    text-align: center;
+}
+.sns a {
+    display: inline-block;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 0 15px 0 10px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    line-height: 3;
+    color: #fff;
+    transition: all .3s;
+}
+.sns a:hover {
+}
+.sns a i {
+    display: inline-block;
+    padding-right: 10px;
+    font-weight: 900;
+    font-size: 1.2em;
+}
+.sns a.twitter {
+    background: #55acee;
+}
+.sns a:hover.twitter {
+    color: #55acee;
+    background: #fff;
+}
+.sns a.pixiv {
+    background: #0096FA;
+}
+.sns a:hover.pixiv {
+    color: #0096FA;
+    background: #fff;
+}
+.sns a.niconico {
+    background: #333;
+}
+.sns a:hover.niconico {
+    color: #333;
+    background: #fff;
+}
+/* **************************
+  [-] レスポンシブ対応
 ************************** */
 /* タブレット端末 */
 @media only screen and (min-width: 480px) {
@@ -170,19 +247,21 @@ h1 {font-size: 1.8em}
     body {
         transform: rotate(0.001deg);
     }
-    #content {
+    .wrapper {
         width: 1400px;
         margin: 0 auto;
+    }
+    #content {
         flex-direction: row;
     }
     #main {
         flex: 1;
-        margin-right: 276px;
+        margin-right: 212px;
         padding: 20px 30px;
         order:2;
     }
     #side {
-        width: 276px;
+        width: 212px;
         padding: 20px 10px;
         order:1;
     }
@@ -191,5 +270,8 @@ h1 {font-size: 1.8em}
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
     body {
         font-family: Meiryo, san-serif;
+    }
+    .side-title {
+        font-family: cursive;
     }
 }
