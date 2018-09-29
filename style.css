@@ -95,7 +95,7 @@ vertical-align:middle;
 ************************** */
 @font-face {
     font-family: 'Limelight';
-    src: url('https://radafox.github.io/webfonts/Limelight-Regular.woff'), url('https://radafox.github.io/webfonts/Limelight-Regular.ttf');
+    src: url('/webfonts/Limelight-Regular.woff') format("woff");
 }
 body {
     font-family: 'M PLUS Rounded 1c', 'Hiragino Kaku Gothic ProN', Meiryo, san-serif;
