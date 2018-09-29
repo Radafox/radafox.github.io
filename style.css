@@ -95,7 +95,7 @@ vertical-align:middle;
 ************************** */
 @font-face {
     font-family: 'Limelight';
-    src: url('/webfonts/Limelight-Regular.woff'), url('/webfonts/Limelight-Regular.ttf');
+    src: url('https://radafox.github.io/webfonts/Limelight-Regular.woff'), url('https://radafox.github.io/webfonts/Limelight-Regular.ttf');
 }
 body {
     font-family: 'M PLUS Rounded 1c', 'Hiragino Kaku Gothic ProN', Meiryo, san-serif;
@@ -107,6 +107,7 @@ body {
     background-image:
     radial-gradient(#ccc 1px, transparent 1px);
     background-size: 20px 20px;
+    transform: rotate(0.001deg);
 }
 header {
     width: 100%;
@@ -237,17 +238,15 @@ h1 a {
 ************************** */
 /* タブレット端末 */
 @media only screen and (min-width: 480px) {
-}
-/* パソコン */
-@media only screen and (min-width: 768px) {
-    body {
-        transform: rotate(0.001deg);
-    }
     .wrapper {
         width: 100%;
         max-width: 1097px;
         margin: 0 auto;
     }
+}
+/* パソコン */
+@media only screen and (min-width: 768px) {
+
     #content {
         flex-direction: row;
     }
