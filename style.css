@@ -95,7 +95,7 @@ vertical-align:middle;
 ************************** */
 @font-face {
     font-family: 'Limelight';
-    src: url('/webfonts/Limelight-Regular.woff');
+    src: url('/webfonts/Limelight-Regular.woff'), url('/webfonts/Limelight-Regular.ttf');
 }
 body {
     font-family: 'M PLUS Rounded 1c', 'Hiragino Kaku Gothic ProN', Meiryo, san-serif;
@@ -121,6 +121,11 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
+}
+nav a i {
+    width: 1em;
+    margin: 0 0.5em;
+    text-align: center;
 }
 .wrapper {
     width: 100%;
@@ -192,16 +197,14 @@ h1 a {
 ************************** */
 .sns {
     display: block;
-    text-align: center;
 }
 .sns a {
-    display: inline-block;
-    width: 100%;
-    margin: 5px 0;
+    display: block;
+    width: 50%;
+    margin: 5px 1em;
     border-radius: 5px;
     padding: 0 15px 0 10px;
     font-weight: 700;
-    text-align: center;
     text-decoration: none;
     line-height: 3;
     color: #fff;
@@ -210,7 +213,8 @@ h1 a {
 .sns a:hover {
 }
 .sns a i {
-    display: inline-block;
+    display: inline;
+    margin-left: 1.5em;
     padding-right: 10px;
     font-weight: 900;
     font-size: 1.2em;
@@ -218,24 +222,13 @@ h1 a {
 .sns a.twitter {
     background: #55acee;
 }
-.sns a:hover.twitter {
-    color: #55acee;
-    background: #fff;
-}
 .sns a.pixiv {
     background: #0096FA;
-}
-.sns a:hover.pixiv {
-    color: #0096FA;
-    background: #fff;
 }
 .sns a.niconico {
     background: #333;
 }
-.sns a:hover.niconico {
-    color: #333;
-    background: #fff;
-}
+
 /* **************************
   [-] レスポンシブ対応
 ************************** */
@@ -248,7 +241,8 @@ h1 a {
         transform: rotate(0.001deg);
     }
     .wrapper {
-        width: 1400px;
+        width: 100%;
+        max-width: 1400px;
         margin: 0 auto;
     }
     #content {
@@ -256,14 +250,59 @@ h1 a {
     }
     #main {
         flex: 1;
-        margin-right: 212px;
         padding: 20px 30px;
         order:2;
     }
     #side {
         width: 212px;
-        padding: 20px 10px;
+        padding: 20px 10px 200px;
         order:1;
+    }
+    /* Animation */
+    nav a {
+        display: block;
+        position: relative;
+        transition: all .5s;
+    }
+    nav a:hover {
+        color: #333;
+    }
+    nav a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .5s;
+    }
+    nav a:hover:after {
+      transform: scale(1, 1);
+      background: #333;
+    }
+    .sns a {
+        width: 100%;
+        margin: 5px auto;
+    }
+    .sns a:hover.twitter {
+        color: #55acee;
+        background: #fff;
+    }
+    .sns a:hover.pixiv {
+        color: #0096FA;
+        background: #fff;
+    }
+    .sns a:hover.niconico {
+        color: #333;
+        background: #fff;
+    }
+}
+@media only screen and (min-width: 1188px) {
+    #main {
+        margin-right: 212px;
     }
 }
 /* Google Chrome */
