@@ -95,6 +95,10 @@ vertical-align:middle;
 /* **************************
   [1] メイン要素
 ************************** */
+@font-face {
+    font-family: 'Limelight';
+    src: url('/webfonts/Limelight-Regular.woff');
+}
 body {
     font-family: 'M PLUS Rounded 1c', 'Hiragino Kaku Gothic ProN', Meiryo, san-serif;
     font-size: 16px;
@@ -111,7 +115,6 @@ header {
 }
 nav {
     width: 100%;
-    background: skyblue;
 }
 #content {
     width: 100%;
@@ -127,6 +130,8 @@ nav {
 #side {
     width: 100%;
     order:2;
+    background: #5aa8ed;
+    color: #fff;
 }
 footer {
     width: 100%;
@@ -136,19 +141,22 @@ footer {
 /* **************************
   [2] 各文章の要素
 ************************** */
-h1 {font-size: 1.8em;}
-h2 {font-size: 1.7em;}
-h3 {font-size: 1.55em;}
-h4 {font-size: 1.4em;}
-h5 {font-size: 1.25em;}
-h6 {font-size: 1.1em;}
+h1 {font-size: 1.8em}
 /* **************************
   [3] 各要素
 ************************** */
-.twitter-timeline {
+.side-title {
+    font-family: 'Limelight', cursive;
+    font-size: 1.5rem;
+}
+.update-log-box {
+    height: 8.5em;
+    background: #fff;
+    color: #333;
+    overflow: scroll;
 }
 .copyright {
-    margin: 0 1em;
+    padding: 1em 0;
     font-size: 12px;
 }
 /* **************************
@@ -168,15 +176,14 @@ h6 {font-size: 1.1em;}
         flex-direction: row;
     }
     #main {
-        width: 70%;
-        margin-right: 15%;
-        padding: 20px;
+        flex: 1;
+        margin-right: 276px;
+        padding: 20px 30px;
         order:2;
     }
     #side {
-        background: orange;
-        width: 15%;
-        padding: 20px;
+        width: 276px;
+        padding: 20px 10px;
         order:1;
     }
 }
