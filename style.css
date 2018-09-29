@@ -93,39 +93,60 @@ vertical-align:middle;
   [1] メイン要素
 ************************** */
 body {
-    font-family: 'Hiragino Kaku Gothic ProN', Meiryo, san-serif;
+    font-family: 'M PLUS Rounded 1c', 'Hiragino Kaku Gothic ProN', Meiryo, san-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
     color: #333;
     background: #eee;
+    height: 100%;
 }
 header {
     width: 100%;
     background: tomato;
+    text-align: center;
 }
 nav {
     width: 100%;
     background: skyblue;
 }
-.wrapper {
+#content {
     width: 100%;
-}
-.container {
     display: flex;
 }
-.main {
+#main {
     background: pink;
     width: 70%;
+    padding: 20px;
 }
-.side {
+#side {
     background: orange;
     width: 30%;
+    padding: 20px;
 }
 footer {
+    width: 100%;
     background: plum;
+    text-align: center;
 }
-
+/* **************************
+  [2] 各文章の要素
+************************** */
+h1 {font-size: 1.8em;}
+h2 {font-size: 1.7em;}
+h3 {font-size: 1.55em;}
+h4 {font-size: 1.4em;}
+h5 {font-size: 1.25em;}
+h6 {font-size: 1.1em;}
+/* **************************
+  [3] 各要素
+************************** */
+.twitter-timeline {
+}
+.copyright {
+    margin: 0 1em;
+    font-size: 12px;
+}
 /* **************************
   [] レスポンシブ対応
 ************************** */
@@ -134,8 +155,17 @@ footer {
 }
 /* パソコン */
 @media only screen and (min-width: 768px) {
-  .wrapper {
-    width: 1200px;
-    margin: 0 auto;
-  }
+    body {
+        transform: rotate(0.001deg);
+    }
+    #content {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+/* Google Chrome */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+    body {
+        font-family: Meiryo, san-serif;
+    }
 }
