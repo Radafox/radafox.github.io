@@ -88,6 +88,9 @@ input, select {
 vertical-align:middle;
 }
 
+* {
+    box-sizing: border-box;
+}
 
 /* **************************
   [1] メイン要素
@@ -113,16 +116,17 @@ nav {
 #content {
     width: 100%;
     display: flex;
+    flex-direction: column;
 }
 #main {
     background: pink;
-    width: 70%;
+    width: 100%;
     padding: 20px;
+    order:1;
 }
 #side {
-    background: orange;
-    width: 30%;
-    padding: 20px;
+    width: 100%;
+    order:2;
 }
 footer {
     width: 100%;
@@ -159,8 +163,21 @@ h6 {font-size: 1.1em;}
         transform: rotate(0.001deg);
     }
     #content {
-        width: 1200px;
+        width: 1400px;
         margin: 0 auto;
+        flex-direction: row;
+    }
+    #main {
+        width: 70%;
+        margin-right: 15%;
+        padding: 20px;
+        order:2;
+    }
+    #side {
+        background: orange;
+        width: 15%;
+        padding: 20px;
+        order:1;
     }
 }
 /* Google Chrome */
