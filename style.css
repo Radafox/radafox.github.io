@@ -228,6 +228,9 @@ h1 a {
 .sns a.niconico {
     background: #333;
 }
+.sns a.github {
+    background: #333;
+}
 
 /* **************************
   [-] レスポンシブ対応
@@ -242,7 +245,7 @@ h1 a {
     }
     .wrapper {
         width: 100%;
-        max-width: 1400px;
+        max-width: 1097px;
         margin: 0 auto;
     }
     #content {
@@ -299,8 +302,15 @@ h1 a {
         color: #333;
         background: #fff;
     }
+    .sns a:hover.github {
+        color: #333;
+        background: #fff;
+    }
 }
-@media only screen and (min-width: 1188px) {
+@media only screen and (min-width: 1440px) {
+    .wrapper {
+        max-width: 1400px;
+    }
     #main {
         margin-right: 212px;
     }
