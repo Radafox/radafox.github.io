@@ -243,7 +243,7 @@ h1 a {
   [-] レスポンシブ対応
 ************************** */
 /* タブレット端末 */
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 481px) {
     .wrapper {
         width: 100%;
         max-width: 1097px;
@@ -251,7 +251,13 @@ h1 a {
     }
 }
 /* パソコン */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
+    body {
+        font-family: 'Hiragino Kaku Gothic ProN', Meiryo, san-serif;
+    }
+    .side-title {
+        font-family: cursive;
+    }
     .wrapper {
         margin: 0 auto;
     }
@@ -316,20 +322,11 @@ h1 a {
         background: #fff;
     }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1441px) {
     .wrapper {
         max-width: 1400px;
     }
     #main {
         margin-right: 212px;
-    }
-}
-/* Google Chrome */
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
-    body {
-        font-family: Meiryo, san-serif;
-    }
-    .side-title {
-        font-family: cursive;
     }
 }
