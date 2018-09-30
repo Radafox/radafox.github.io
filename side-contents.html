@@ -41,3 +41,9 @@
 <section>
   <h2 class='side-title'>LINK</h2>
 </section>
+
+<!-- #side-navの現在のページにactiveクラスを付与 -->
+<script>
+   var url = window.location.pathname;
+      $('#side-nav a[href="'+url+'"]').addClass('active');
+</script>
