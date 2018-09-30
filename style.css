@@ -126,7 +126,7 @@ nav a i {
     margin: 0 0.5em;
     text-align: center;
 }
-nav a .active {
+nav a.active {
     color: orange;
 }
 .wrapper {
