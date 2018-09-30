@@ -10,70 +10,27 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700" rel="stylesheet"/>
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="style.css">
 <link rel="shortcut icon" href="">
 </head>
 <body>
 
-  <header>
-    <div class='wrapper'>
-      <h1>
-        <a href='https://radafox.github.io/'>Radafox's Page (仮)</a>
-      </h1>
-    </div>
-  </header>
   <div class='wrapper'>
+
     <div id='content'>
 
       <div id='side'>
-
-        <nav>
-          <h2 class='side-title'>MENU</h2>
-          <ul>
-            <li><a href="/index.html"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="#"><i class="fas fa-question"></i>About (工事中)</a></li>
-            <li><a href="#"><i class="fas fa-pencil-alt"></i>Arts (工事中)</a></li>
-            <li><a href="#"><i class="far fa-sticky-note"></i>Memo (工事中)</a></li>
-          </ul>
-        </nav>
-
-        <section>
-          <h2 class='side-title'>UPDATE</h2>
-          <div class='update-log-box'>
-            <p>'18/9/29 サイト開設</p>
-          </div>
-        </section>
-
-        <section>
-          <h2 class='side-title'>PROFILE</h2>
-          <img class='profile-img' href='#' alt='profile'/>
-          <p>
-            PN: Radafox<br>
-            Hobby: お絵描き/ゲーム/音楽/動画<br>
-            Like: 東方/
-          </p>
-          <div class='sns'>
-            <a class='twitter' href='https://twitter.com/Radafox0' target='_blank'><i class="fas fa-arrow-right"></i>Twitter</a>
-            <a class='pixiv' href='https://www.pixiv.net/member.php?id=5085249' target='_blank'><i class="fas fa-arrow-right"></i>Pixiv</a>
-            <a class='niconico' href='http://www.nicovideo.jp/user/31296031' target='_blank'><i class="fas fa-arrow-right"></i></i>Niconico</a>
-            <a class='github' href='https://github.com/Radafox' target='_blank'><i class="fas fa-arrow-right"></i></i>Github</a>
-          </div>
-        </section>
-
-        <section>
-          <h2 class='side-title'>ABOUT</h2>
-          <p>
-            メモや創作物置き場にする予定です。転載はご遠慮ください。
-          </p>
-        </section>
-
-        <section>
-          <h2 class='side-title'>LINK</h2>
-        </section>
-
+        <div id="side-contents"></div>
       </div> <!-- #side -->
 
       <div id='main'>
+        <header>
+          <div class='wrapper'>
+            <h1>
+              <a href='https://radafox.github.io/'>Radafox's Page (仮)</a>
+            </h1>
+          </div>
+        </header>
         <article class='post'>
           <p>Radafoxのページ(工事中)</p>
         </article>
@@ -82,11 +39,21 @@
     </div> <!-- #content -->
   </div> <!-- .wrapper -->
 
-  <footer>
-    <div class='wrapper'>
-      <p class='copyright'>&#169; 2018 Radafox</p>
-    </div>
-  </footer>
+  <footer></footer>
 
+  <!-- scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- #side-contents, footerの呼び出し -->
+  <script type="text/javascript">
+    $(function(){
+      $("#side-contents").load("side-contents.html");
+      $("footer").load("footer.html");
+    })
+  </script>
+  <!-- navの現在のページにactiveクラスを付与 -->
+  <script>
+     var url = window.location.pathname;
+        $('nav a[href="'+url+'"]').addClass('active');
+</script>
 </body>
 </html>
